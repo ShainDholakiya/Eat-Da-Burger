@@ -2,10 +2,9 @@
   "name": "eat-da-burger",
   "version": "1.0.0",
   "description": "# Node Express Handlebars",
-  "main": "server.js",
+  "main": "APP.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
