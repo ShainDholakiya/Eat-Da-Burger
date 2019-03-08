@@ -40,12 +40,12 @@ const displayNewBurger = (burger) => {
 };
 
 // Handle Failures
-const addBurgerFail = (response) => {
+const addBurgerFail = () => {
     alert("Burger Failed");
 };
 
 
-$('button[type="submit"]').on('click', function() {
+$('button[type="submit"]').on('click', function(event) {
     event.preventDefault();
 
     const burgerName = $('input[name="burger_name"]').val();
@@ -61,3 +61,53 @@ $('button[type="submit"]').on('click', function() {
     .catch(addBurgerFail);
 
 });;
+
+// Delete Section
+const removeBurgerOnDelete = (burger) => {
+    const id = burger.id;
+
+    $(`.all-burgers .burger[data-id=${id}]`).remove();
+};
+
+// Handle Failures
+const removeBurgerFailed = () => {
+    alert("Failed deleting burger");
+};
+
+$('.all-burgers .burger button').on('click', function() {
+    const id = $(this).attr('data-id');
+
+    $.ajax({
+        url: '/delete/' + id,
+        method: 'DELETE'
+    })
+    .then(removeBurgerOnDelete)
+    .catch(removeBurgerFailed);
+});
+
+// Add to devoured section
+const addBurgerToDevoured = (burger) => {
+    const id = burger.id;
+    $(`#${id}`).remove();
+};
+
+// Handle Failures
+const addBurgerToDevouredFailed = () => {
+    alert("Failed adding burger to devoured list");
+};
+
+$(document).on('click', '.devoured', function() {
+
+    const id = $(this).attr('data-id');
+    const value = $(this).attr('data-state');
+
+    let condition = value === "0" ? false : true;
+
+    $.ajax({
+        url: `/${id}/${!condition}`,
+        method: 'PUT'
+    })
+    .then(addBurgerToDevoured)
+    .catch(addBurgerToDevouredFailed);
+
+});

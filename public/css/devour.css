@@ -1,0 +1,37 @@
+body {
+    background-color: lightgray;
+}
+
+.main-devoured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.main-devoured__burgers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-devoured__burgers .content-burger__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e8d1dd;
+    padding: 10px;
+    height: 100px;
+    width: 500px;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.main-devoured__burgers .content-burger__list img {
+    height: 70px;
+    border-radius: 4px;
+}
+
+.main-devoured__burgers .content-burger__list p {
+    font-size: 24px;
+}

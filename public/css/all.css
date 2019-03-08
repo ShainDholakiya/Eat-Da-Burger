@@ -1,0 +1,43 @@
+body {
+    background-color: lightgray;
+}
+.all-burgers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.devoured-action {
+    margin-bottom: 5em;
+    width: 500px;
+}
+
+.undevoured-action {
+    width: 500px;
+}
+
+.all-burgers img {
+    height: 100px;
+}
+
+.all-burgers .burger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d8d6d8;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.burger p {
+    font-size: 24px;
+}
+
+.devoured-section .burger {
+    background: #e8d1dd;
+}
+
+.undevoured-section .burger {
+    background: #f5b9ac;
+}

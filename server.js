@@ -21,5 +21,5 @@ app.set('view engine', 'handlebars');
 app.use("/", router);
 
 app.listen(PORT, () => {
-    console.log('Server is starting at PORT ${PORT}');
+    console.log(`Server is starting at PORT ${PORT}`);
 });
