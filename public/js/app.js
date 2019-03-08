@@ -1,6 +1,6 @@
 // Create Burger Template 
 const burgerTemplate = (burgerName, id, devoured) => {
-    const burgerContainer = $('div').attr({
+    const burgerContainer = $('<div>').attr({
         class: 'content-burger_list',
         id: id
     });
@@ -14,7 +14,7 @@ const burgerTemplate = (burgerName, id, devoured) => {
 
     const button = $('<button>').attr({
         'data-id': id,
-        class: 'btn btn-outline-dark devour',
+        class: 'btn btn-default devoured',
         'data-state': devoured
     });
 
