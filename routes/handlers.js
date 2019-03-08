@@ -27,22 +27,9 @@ router.get('/all', (req, res) => {
     });
 });
 
-router.get('/devoured', (req, res) => {
-    orm.selectAllBy('devoured', true, function (error, burgers) {
-        if (error) {
-            return res.status(501).json({
-                message: "Not able to query the database by devoured"
-            });
-        }
-
-        res.render('devoured', { burgers, style: 'devour' });
-    });
-});
-
 router.post('/add', (req, res) => {
 
     const burgerName = req.body.burger_name;
-    const devoured = req.body.devoured;
 
     orm.insertOne(burgerName, function (error, burger) {
         if (error) {

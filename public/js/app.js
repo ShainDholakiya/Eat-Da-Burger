@@ -45,7 +45,7 @@ const addBurgerFail = () => {
 };
 
 
-$('button[type="submit"]').on('click', function(event) {
+$('button[type=submit]').on('click', function(event) {
     event.preventDefault();
 
     const burgerName = $('input[name="burger_name"]').val();
