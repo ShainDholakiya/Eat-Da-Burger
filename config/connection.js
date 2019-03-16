@@ -19,7 +19,7 @@ module.exports = {
     // },
     // "production": {
         host: "zj2x67aktl2o6q2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        username: "ay7u4g9197bveocl",
+        user: "ay7u4g9197bveocl",
         password: "xi0zk82hj6mzcyx7",
       database: "hocdq3nbrqz38ftp",
       port: 3306,
