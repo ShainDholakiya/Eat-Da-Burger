@@ -1,15 +1,15 @@
 const mysql = require('mysql');
-const connectionOptions = require("./connection")
+// const connectionOptions = require("./connection")
 var connection = mysql.createConnection({
-    "host": "zj2x67aktl2o6q2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "user": "ay7u4g9197bveocl",
-    "password": "xi0zk82hj6mzcyx7",
-    "database": "hocdq3nbrqz38ftp",
-    "port": 3306,
-    "dialect": "mysql"
+    host: "zj2x67aktl2o6q2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "ay7u4g9197bveocl",
+    password: "xi0zk82hj6mzcyx7",
+    database: "hocdq3nbrqz38ftp",
+    port: 3306,
+    dialect: "mysql"
 });
    
-// connection.connect();
+connection.connect();
 
 const orm = {
     selectAll: function(cb) {
