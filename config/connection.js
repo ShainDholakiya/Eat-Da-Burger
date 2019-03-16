@@ -18,7 +18,7 @@ module.exports = {
       "password": process.env.password,
       "database": process.env.database,
       "host": process.env.host,
-      "port": 8080,
+      "port": 3306,
       "dialect": "mysql"
     },
     "test":{
@@ -26,7 +26,7 @@ module.exports = {
       "password": process.env.password,
       "database": process.env.database,
       "host": process.env.host,
-      "port": 8080,
+      "port": 3306,
       "dialect": "mysql"
     },
     "production": {
@@ -34,7 +34,7 @@ module.exports = {
       "password": process.env.password,
       "database": process.env.database,
       "host": process.env.host,
-      "port": 8080,
+      "port": 3306,
       "dialect": "mysql"
     },
   }
