@@ -7,9 +7,9 @@ const router = require('./routes/handlers');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
+const path = require("path");
 
 app.use(express.static('public'));
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
@@ -22,6 +22,7 @@ app.engine('handlebars', exphbs({
     partialsDir: './views/partials/'
 }));
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use("/", router);
 
