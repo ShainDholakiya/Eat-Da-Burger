@@ -51,6 +51,6 @@ const orm = {
         });
     }
 };
-connection.end();
+// connection.end();
 
 module.exports = orm;
