@@ -21,8 +21,8 @@ app.engine('handlebars', exphbs({
     layoutsDir: './views/layouts/',
     partialsDir: './views/partials/'
 }));
-app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'handlebars');
 
 app.use("/", router);
 
