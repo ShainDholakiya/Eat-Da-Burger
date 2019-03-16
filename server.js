@@ -6,7 +6,6 @@ const exphbs = require('express-handlebars');
 const router = require('./routes/handlers');
 
 const PORT = process.env.PORT || 8080;
-console.log(PORT)
 const app = express();
 
 app.use(express.static('public'));
@@ -16,7 +15,12 @@ app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
 // Configure Express Handlebars
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({ 
+    defaultLayout: 'main',
+    // defaultLayout: './views/layouts/main',
+    layoutsDir: './views/layouts/',
+    partialsDir: './views/partials/'
+}));
 app.set('view engine', 'handlebars');
 
 app.use("/", router);
