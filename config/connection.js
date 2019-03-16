@@ -28,7 +28,7 @@ module.exports = {
         "user": process.env.user,
         "password": process.env.password,
         "database": process.env.database,
-        "port": 3306,
-        "dialect": "mysql"
+        port: 3306,
+        dialect: "mysql"
     // },
   }
