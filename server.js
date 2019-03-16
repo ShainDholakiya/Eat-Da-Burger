@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 const router = require('./routes/handlers');
 
 const PORT = process.env.PORT || 8080;
+console.log(PORT)
 const app = express();
 
 app.use(express.static('public'));
