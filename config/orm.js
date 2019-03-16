@@ -1,4 +1,8 @@
-const connection = require('./connection');
+const mysql = require('mysql');
+const connectionOptions = require("./connection")
+var connection = mysql.createConnection(connectionOptions);
+   
+  connection.connect();
 
 const orm = {
     selectAll: function(cb) {
