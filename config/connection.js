@@ -1,11 +1,40 @@
-const mysql = require('mysql');
-let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'burgers_db'
-});;
+require('dotenv').config();
+// const mysql = require('mysql');
 
-connection.connect();
+// let connection = mysql.createConnection({
+//     host: process.env.host,
+//     user: process.env.user,
+//     password: process.env.password,
+//     database: process.env.database
+// });;
 
-module.exports = connection
+// connection.connect();
+
+// module.exports = connection
+
+module.exports = {
+    "development": {
+      "username": process.env.user,
+      "password": process.env.password,
+      "database": process.env.database,
+      "host": process.env.host,
+      "port": 8080,
+      "dialect": "mysql"
+    },
+    "test":{
+      "username": process.env.user,
+      "password": process.env.password,
+      "database": process.env.database,
+      "host": process.env.host,
+      "port": 8080,
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": process.env.user,
+      "password": process.env.password,
+      "database": process.env.database,
+      "host": process.env.host,
+      "port": 8080,
+      "dialect": "mysql"
+    },
+  }
